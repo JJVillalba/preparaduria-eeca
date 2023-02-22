@@ -1,0 +1,13 @@
+.parcel-cache
+node_modules
+libros
+.tmp
+
+
+webpage/figures
+webpage/dist
+
+
+**.log
+**.md5
+book/figures/*
