@@ -1,0 +1,36 @@
+\makeatother
+
+\usepackage[framemethod=TikZ]{mdframed} % Required for colorful boxes
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage[svgnames]{xcolor}
+
+\newtheorem{theorem}{Teorema}
+
+\newtheorem{corollary}{Corolario}
+
+\newtheorem{lema}{Lema}
+
+\newtheorem{proposition}{Proposición}
+
+%\newtheorem{definition}{Definición}
+
+
+
+\declaretheoremstyle[ %
+	notebraces={}{},%
+	mdframed={
+		middlelinecolor=red,
+   		middlelinewidth=2pt,
+	   	backgroundcolor=red!20,
+	   	roundcorner=20pt,
+	}
+]{@style@definition}
+
+\declaretheorem[
+    name=Definición,
+	numberwithin=section,
+	style=@style@definition, 
+]{definition}
+
+\makeatletter

@@ -1,0 +1,92 @@
+\RequirePackage[framemethod=TikZ]{mdframed}
+\RequirePackage{amsthm}
+\RequirePackage{thmtools}
+
+\newenvironment{resumen}
+	{\vspace*{-.5cm}\small	}
+	{\newpage}
+
+%%
+% Leftline frame style
+\mdfdefinestyle{@leftline}{
+		backgroundcolor=gray!12,
+        linewidth=2.5pt,
+		topline=false,
+		bottomline=false,
+		rightline=false,
+		leftline=true,
+		innerleftmargin     =0.2cm,
+        innerrightmargin    =0.5cm,
+        innertopmargin      =\parskip,
+        innerbottommargin   =\parskip,
+}
+
+
+%%
+% Estilo de las Definiciones
+\declaretheoremstyle[ %
+	notebraces={}{},%
+	mdframed={style=@leftline,linecolor=ColorDark}
+]{@style@definition}
+
+
+%%
+% Estilo de los Teoremas
+\declaretheoremstyle[ %
+	notebraces={}{},%
+	mdframed={style=@leftline,linecolor=ColorPrimary}
+]{@style@theorem}
+
+
+\declaretheorem[
+    name=Axioma,
+	numberwithin=section,
+	style=@style@theorem, 
+]{axiom}
+
+
+\declaretheorem[
+    name=Teorema,
+	numberwithin=section,
+	style=@style@theorem, 
+]{theorem}
+
+\declaretheorem[
+    name=Corolario,
+	numberwithin=section,
+	style=@style@theorem, 
+]{corollary}
+
+\declaretheorem[
+    name=Lema,
+	numberwithin=section,
+	style=@style@theorem, 
+]{lema}
+
+\declaretheorem[
+    name=Proposición,
+	numberwithin=section,
+	style=@style@theorem, 
+]{proposition}
+
+\declaretheorem[
+    name=Definición,
+	numberwithin=section,
+	style=@style@definition, 
+]{definition}
+
+\renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}
+
+\renewenvironment{proof}[1][\proofname]{
+	\begin{mdframed}[style=@leftline,linecolor=gray!50]	
+	\par
+	\pushQED{\qed}%
+	\normalfont \topsep6\p@\@plus6\p@\relax
+	\trivlist
+	\item\relax
+	{\itshape
+	#1\@addpunct{:}}\hspace\labelsep\ignorespaces
+}{%
+	\popQED\endtrivlist\@endpefalse
+	\end{mdframed}
+}
