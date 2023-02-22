@@ -1,27 +1,3 @@
-# Notas para una licenciatura
+# preparaduria-eeca
 
-[Versión web](https://jjvillalba.github.io/notas-para-una-licenciatura)
-
-## Acerca del libro
-
-Este libro es el resultado de compilar mis apuntes de las clases de la licenciatura en matematicas puras de la USB.
-
-## Sobre la versión en HTML
-
-## Como contribuir
-
-## To Do: 
-
-- [ ] Theorem and defintion counters in web
-
-- [ ] Indexes web version
-
-- [ ] More content
-
-- [ ] Translating?
-
-- [ ] Interactive examples see:
-    - [CindyJs](https://cindyjs.org/)
-    - [dg.js](http://jason.matf.bg.ac.rs/~dg/index.html)
-    - [jsxgraph](https://jsxgraph.uni-bayreuth.de/wp/index.html)
- 
+Repositorio para las notas de las preparadurias de matematicas de la sección 13 de la escuela de estadisitica y ciencias actuariales de la UCV 
